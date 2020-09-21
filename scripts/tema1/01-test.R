@@ -1,9 +1,9 @@
 #Esta l√≠nea no funciona, por ahora...
 #lm(y~x)
 
-# INSTALAR LA LIBRERÕA graphics
+# INSTALAR LA LIBRER√çA graphics
 install.packages("graphics", dep = TRUE)
-# UTILIZAR/CARGAR LA LIBRERÕA graphics
+# UTILIZAR/CARGAR LA LIBRER?A graphics
 library(graphics)
 
 require(graphics)
