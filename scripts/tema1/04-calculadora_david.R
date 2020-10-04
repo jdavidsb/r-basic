@@ -310,4 +310,76 @@ ls()
 # Borrar todas las funciones y variables
 rm(list = ls())
 
+# NÚMEROS COMPLEJOS
+z = 2+3i
+z2 = complex(real = 2, imaginary = -3)
 
+Re(z)
+
+Im(z)
+
+Conj(z2)
+
+(3+2i)*5
+
+(3+2i)*(-1+3i)
+
+(3+2i)/(-1+3i)
+
+# Esto es un error
+# 2+7*i
+
+# Error
+# pi + sqrt(2)i
+
+complex(real = pi, imaginary = sqrt(2)) -> z1
+z1
+
+# LOS NÚMEROS COMPLEJOS SE INVENTAN PARA PODER TRABAJAR CON RAÍZ CUADRADA DE NÚMEROS NEGATIVOS
+
+# Esto daría error
+# sqrt(-5)
+sqrt(as.complex(-5))
+
+# La raíz cuadrada devuelve, de las dos soluciones, la de la parte real de z positiva Re(z)>0,
+# para obtener la otra parte, hay que multiplicar por -1
+sqrt(3+2i) # z^2 = 3+2i
+sqrt(3+2i)*-1
+
+exp(3+2i)
+sin(3+2i)
+cos(3+2i)
+tan(3+2i)
+# Módulo = sqrt(Re(z)^2 + Im(z)^2)
+Mod(z1)
+# Argumento = arctan(Im(z)/Re(z))
+# = arcos(Re(z)/Mod(z))
+# = arcsin(Im(z)/Mod(z))
+# El argumento va de -pi (sin incluir) a pi (incluido) (-pi, pi]
+Arg(z1)
+Arg(-1+0i)
+Arg(-1-2i)
+
+# Conjugado = Re(z) - Im(z)i
+Conj(z1)
+
+# Parte real de z1
+Re(z1)
+# Parte imaginaria de z1
+Im(z1)
+
+# Cualquier número complejo z se puede calcular como z = Mod(z) * (cos(Arg(z)) + sin(Arg(z))i)
+complex(modulus = 2, argument = pi/2) -> z2
+
+Mod(z2)
+Arg(z2) # Es pi/2
+pi/2
+
+# TEST
+fun = function(x){
+  sqrt(x) * abs((-x)^3)
+}
+fun(4)
+sqrt(4)
+abs(-4^3)
+2*64
